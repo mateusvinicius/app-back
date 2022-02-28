@@ -24,6 +24,12 @@
     "prettier"
   ],
   "rules": {
+    "consistent-return":"off",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "import/prefer-default-export": "off",
+    "max-classes-per-file": "off",
+    "@typescript-eslint/no-namespace": "off",
     "no-underscore-dangle": "off",
     "prettier/prettier": "error",
     "class-methods-use-this": "off",
