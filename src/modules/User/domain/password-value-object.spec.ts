@@ -12,4 +12,12 @@ describe('Password Value Object', () => {
 
     expect(password.isLeft()).toBe(true);
   });
+  it('should return a valid status in password encryption ', () => {
+    const password = PasswordValueObject.create('Dhfkldlfjadjl');
+    (password.value as PasswordValueObject).encrypt_password();
+    expect(password.isRight()).toBe(true);
+    expect((password.value as PasswordValueObject).isAlreadyEncrypted).toBe(
+      true,
+    );
+  });
 });
